@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ben van Donkelaar</title>
+  <title>Ben van Donkelaar - Personal Website</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,27 +12,55 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background-color: #4a90e2;
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem 1rem 1rem;
       text-align: center;
+      position: relative;
     }
+
+    nav {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid white;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      background-color: white;
+      color: #4a90e2;
+    }
+
     section {
       padding: 2rem;
       max-width: 800px;
       margin: auto;
     }
+
     h2 {
       color: #4a90e2;
     }
+
     a {
       color: #4a90e2;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
       background-color: #eee;
       text-align: center;
@@ -44,26 +72,34 @@
 </head>
 <body>
   <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Resume</a>
+      <a href="#contact">Contact</a>
+      <a href="#">Blank 1</a>
+      <a href="#">Blank 2</a>
+      <a href="#">Blank 3</a>
+    </nav>
     <h1>Ben van Donkelaar</h1>
-    <p>Student | Developer | Researcher</p>
+    <p>Student | Developer | Creator</p>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm Ben. I am a first year student at the University of Toronto specilizing in Mathematics and Physics.</p>
+    <p>Hello! I'm Ben!</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Project 1:</strong> Physics paper (Link not active yet)– <a href="https://example.com" target="_blank">View</a></li>
-      <li><strong>Project 2:</strong> Science of Learning Thesis (Link not active yet)– <a href="https://example.com" target="_blank">View</a></li>
+      <li><strong>Project 1:</strong> thing – <a href="https://example.com" target="_blank">View</a></li>
+      <li><strong>Project 2:</strong> thin 2.0 – <a href="https://example.com" target="_blank">View</a></li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>You can reach me via email at <a href="mailto:benvd9@gmail.com">benvd9@gmail.com</a>.</p>
+    <p>You can reach me via email at <a href="benvd9:you@gmail.com">benvd9@gmail.com</a>.</p>
     <p>Or find me on <a href="https://github.com/benvandonkelaar" target="_blank">GitHub</a> and <a href="https://linkedin.com/in/ben-vandonkelaar" target="_blank">LinkedIn</a>.</p>
   </section>
 
