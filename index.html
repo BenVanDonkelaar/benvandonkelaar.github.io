@@ -20,16 +20,30 @@
     header {
       background-color: #4a90e2;
       color: white;
-      padding: 3rem 2rem 2rem 2rem;
+      padding: 2.5rem 2rem 2rem 2rem;
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       justify-content: space-between;
-      align-items: center;
     }
 
-    header h1 {
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
       margin: 0;
       font-size: 3.2rem;
       font-style: italic;
+      white-space: nowrap;
+    }
+
+    nav {
+      align-self: flex-end;
     }
 
     nav a {
@@ -99,12 +113,30 @@
       background-color: #eee;
       margin-top: auto;
     }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      nav {
+        align-self: flex-start;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Ben Van Donkelaar</h1>
+    <div class="header-top">
+      <h1>Ben Van Donkelaar</h1>
+    </div>
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="#">Resume</a>
