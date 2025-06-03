@@ -3,109 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ben van Donkelaar - Personal Website</title>
+  <title>Ben Van Donkelaar - Home</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
+    html, body {
       margin: 0;
       padding: 0;
+      min-height: 100%;
+      font-family: Georgia, serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      flex: 1;
     }
 
     header {
       background-color: #4a90e2;
       color: white;
-      padding: 2rem 1rem 1rem 1rem;
-      text-align: center;
-      position: relative;
+      padding: 2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    nav {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      font-style: italic;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 1rem;
-      padding: 0.4rem 0.8rem;
-      border: 1px solid white;
-      border-radius: 5px;
-      font-size: 0.9rem;
+      margin-left: 2rem;
+      font-size: 1.3rem;
+      position: relative;
     }
 
-    nav a:hover {
+    nav a:hover::after,
+    nav a.active::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
       background-color: white;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .bio {
+      flex: 1 1 60%;
+      padding-right: 2rem;
+    }
+
+    .bio h2 {
       color: #4a90e2;
     }
 
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+    .bio p {
+      line-height: 1.6;
     }
 
-    h2 {
-      color: #4a90e2;
+    .photo {
+      flex: 1 1 300px;
+      text-align: center;
     }
 
-    a {
-      color: #4a90e2;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    .photo img {
+      width: 100%;
+      max-width: 250px;
+      border: 3px solid #ccc;
+      border-radius: 8px;
     }
 
     footer {
-      background-color: #eee;
       text-align: center;
       padding: 1rem;
+      color: #777;
       font-size: 0.9rem;
-      color: #555;
+      background-color: #eee;
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
+
   <header>
+    <h1>Ben Van Donkelaar</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="#">Resume</a>
       <a href="contact/">Contact</a>
       <a href="#">Blank 1</a>
       <a href="#">Blank 2</a>
       <a href="#">Blank 3</a>
     </nav>
-    <h1>Ben van Donkelaar</h1>
-    <p>Student | Developer | Creator</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Ben!</p>
-  </section>
+  <div class="container">
+    <div class="bio">
+      <h2>Welcome</h2>
+      <p>Welcome to my homepage. I am a second year student at the University of Toronto pursuing a degree in applied mathematics and physics. This website is a compilation of my work & research for everyone to access.</p>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Project 1:</strong> Physics Project (links not active yet) – <a href="https://example.com" target="_blank">View</a></li>
-      <li><strong>Project 2:</strong> Science of Learning thesis (links not active yet) – <a href="https://example.com" target="_blank">View</a></li>
-    </ul>
-  </section>
+      <p>In my spare time, I enjoy building bots, programs and pretty much anything deemed 'cool'. I also research the mathematics behind everyday things (see 'Annoyance Analysis'). Bar that, you can find me outdoors; camping, hiking, climbing/caving, or fishing with friends and family.</p>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>You can reach me via email at <a href="benvd9:you@gmail.com">benvd9@gmail.com</a>.</p>
-    <p>Or find me on <a href="https://github.com/benvandonkelaar" target="_blank">GitHub</a> and <a href="https://linkedin.com/in/ben-vandonkelaar" target="_blank">LinkedIn</a>.</p>
-  </section>
+      <p>Feel free to explore my work, check out my resume, or reach out via the Contact page!</p>
+
+      <p>If you find any bugs, typos, or errors in my files, projects, or the website please let me know!</p>
+    </div>
+    <div class="photo">
+      <img src="images/your-photo.jpg" alt="Photo of Me">
+      <p style="font-size: 0.9rem;">Me in 2025</p>
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 Ben van Donkelaar. All rights reserved.
+    &copy; 2025 Ben Van Donkelaar. All rights reserved.
   </footer>
+
 </body>
 </html>
-
