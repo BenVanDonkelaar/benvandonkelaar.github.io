@@ -1,1 +1,199 @@
-Hello, resume and CV coming soon!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Ben Van Donkelaar</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: Georgia, serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.075rem;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 2rem 2rem 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3.0rem;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    nav {
+      margin-left: auto;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 1.3rem;
+      position: relative;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    main h2 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #4a90e2;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    form {
+      padding: 1rem 0;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      color: #4a90e2;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    .contact-links {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .contact-links ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-links li {
+      display: flex;
+      align-items: center;
+      font-size: 1.1rem;
+    }
+
+    .contact-links li img {
+      width: 24px;
+      height: 24px;
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.95rem;
+      background-color: #eee;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <h1>Ben Van Donkelaar</h1>
+    </div>
+   <nav>
+      <a href="/">
+                    <span>Home</span>
+                </a>
+      <a href="/resume/">
+                    <span>Resume & CV</span>
+                </a>
+      <a href="/contact/">
+                    <span>Contact</span>
+                </a>
+      <a href="/academic_work/">
+                    <span>Academic Work</span>
+                </a>
+      <a href="/non_academic_work/">
+                    <span>Non-Academic Work</span>
+                </a>
+      <a href="#">
+                    <span>Blank</span>
+                </a>
+      
+    </nav>
+  </header>
+
+  <main>
+    <h2>Hello! My Resume and CV will be available soon!</h2>
+    
+
+  </main>
+
+  <footer>
+    &copy; 2025 Ben Van Donkelaar. All rights reserved.
+  </footer>
+
+</body>
+</html>
