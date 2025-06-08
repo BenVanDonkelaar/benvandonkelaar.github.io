@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You - Ben Van Donkelaar</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: Georgia, serif;
+      background-color: #f4f4f9;
+      color: #333;
+      font-size: 1.075rem;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 2rem 2rem 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3.0rem;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    nav {
+      margin-left: auto;
+      padding-right: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 1.3rem;
+      position: relative;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 1.8rem;
+      color: #4a90e2;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.95rem;
+      background-color: #eee;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <h1>Ben Van Donkelaar</h1>
+    </div>
+    <nav>
+      <a href="/">
+                    <span>Home</span>
+                </a>
+      <a href="/resume/">
+                    <span>Resume & CV</span>
+                </a>
+      <a href="/contact/">
+                    <span>Contact</span>
+                </a>
+      <a href="/academic_work/">
+                    <span>Academic Work</span>
+                </a>
+      <a href="/non_academic_work/">
+                    <span>Non-Academic Work</span>
+                </a>
+      <a href="#">
+                    <span>Blank</span>
+                </a>
+      
+    </nav>
+  </header>
+
+  <main>
+    <h2>Thank you for reaching out!</h2>
+    <p>
+      I’ve received your message and I respond to all emails as soon as possible — usually within 1–2 days.<br>
+      Feel free to browse the site in the meantime or reach out again if it's urgent.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Ben Van Donkelaar. All rights reserved.
+  </footer>
+
+</body>
+</html>
