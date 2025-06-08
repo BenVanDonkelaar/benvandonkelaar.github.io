@@ -15,6 +15,7 @@
       display: flex;
       flex-direction: column;
       font-size: 1.075rem;
+      overflow-y: scroll;
     }
 
     header {
@@ -24,7 +25,6 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
     }
 
     .header-top {
@@ -68,27 +68,65 @@
     }
 
     main {
+      flex: 1;
       max-width: 800px;
       margin: 3rem auto;
       padding: 0 1rem;
-      text-align: center;
-      flex: 1;
     }
 
     main h2 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: bold;
-      margin-bottom: 1.5rem;
       color: #4a90e2;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
-    main p {
-      font-size: 1.075rem;
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
+    form {
+      padding: 1rem 0;
     }
 
-    ul.contact-list {
+    label {
+      display: block;
+      font-weight: bold;
+      color: #4a90e2;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    .contact-links {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .contact-links ul {
       list-style: none;
       padding: 0;
       display: flex;
@@ -98,13 +136,13 @@
       margin-top: 2rem;
     }
 
-    ul.contact-list li {
+    .contact-links li {
       display: flex;
       align-items: center;
       font-size: 1.1rem;
     }
 
-    ul.contact-list li img {
+    .contact-links li img {
       width: 24px;
       height: 24px;
       margin-right: 0.5rem;
@@ -118,22 +156,6 @@
       background-color: #eee;
       margin-top: auto;
     }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.3rem;
-      }
-
-      nav {
-        align-self: flex-start;
-        margin-top: 1rem;
-      }
-
-      nav a {
-        margin-left: 1rem;
-        font-size: 1.1rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -142,53 +164,40 @@
     <div class="header-top">
       <h1>Ben Van Donkelaar</h1>
     </div>
-
-    <!--
     <nav>
-      <a href="/">Home</a>
+      <a href="../index.html">Home</a>
       <a href="#">Resume</a>
-      <a href="contact/" class="active">Contact</a>
-      <a href="my_work/">My Work</a>
+      <a href="index.html" class="active">Contact</a>
+      <a href="#">Blank 1</a>
       <a href="#">Blank 2</a>
       <a href="#">Blank 3</a>
     </nav>
-    -->
-
-    <nav>
-      <a href="/">
-                    <span>Home</span>
-                </a>
-      <a href="/resume/">
-                    <span>Resume & CV</span>
-                </a>
-      <a href="/contact/" class="active">
-                    <span>Contact</span>
-                </a>
-      <a href="/academic_work/">
-                    <span>Academic Work</span>
-                </a>
-      <a href="/non_academic_work/">
-                    <span>Non-Academic Work</span>
-                </a>
-      <a href="#">
-                    <span>Blank</span>
-                </a>
-      
-    </nav>
-    
   </header>
 
   <main>
-    <h2>Contact</h2>
-    <p>You can reach me directly at <a href="mailto:benvd9@gmail.com">benvd9@gmail.com</a>.</p>
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xovweqpb" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
 
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
 
-    <ul class="contact-list">
-      <li><img src="../icons/linkedin.png" alt="LinkedIn"> <a href="#">LinkedIn</a></li>
-      <li><img src="../icons/twitter.png" alt="Twitter"> <a href="#">Twitter</a></li>
-      <li><img src="../icons/email.png" alt="Email"> <a href="mailto:benvd9@gmail.com">Email</a></li>
-    
-    </ul>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="contact-links">
+      <ul>
+        <li><img src="../icons/linkedin.png" alt="LinkedIn"> <a href="#">LinkedIn</a></li>
+        <li><img src="../icons/twitter.png" alt="Twitter"> <a href="#">Twitter</a></li>
+        <li><img src="../icons/scholar.png" alt="Scholar"> <a href="#">Scholar</a></li>
+        <li><img src="../icons/email.png" alt="Email"> <a href="mailto:you@example.com">Email</a></li>
+        <li><img src="../icons/orcid.png" alt="ORCID"> <a href="#">ORCID</a></li>
+      </ul>
+    </div>
   </main>
 
   <footer>
