@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ben Van Donkelaar - Home</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: Georgia, serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.075rem;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 2rem 2rem 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3.0rem;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    nav {
+      align-self: flex-end;
+      padding-right: 15px;
+    }
+
+    nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+    .container {
+      max-width: 1000px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .bio {
+      flex: 1 1 60%;
+      padding-right: 2rem;
+    }
+
+    .bio h2 {
+      color: #4a90e2;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .bio p {
+      line-height: 1.75;
+      margin-bottom: 1.3rem;
+    }
+
+    .photo {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .photo img {
+      width: 100%;
+      max-width: 250px;
+      border: 3px solid #ccc;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.95rem;
+      background-color: #eee;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      nav {
+        align-self: flex-start;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin-left: 1rem;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <h1>Ben Van Donkelaar</h1>
+    </div>
+    <nav>
+      <a href="/" class="active">
+                    <span>Home</span>
+                </a>
+      <a href="/resume/">
+                    <span>Resume & CV</span>
+                </a>
+      <a href="/contact/">
+                    <span>Contact</span>
+                </a>
+      <a href="/academic_work/">
+                    <span>Academic Work</span>
+                </a>
+      <a href="/non_academic_work/">
+                    <span>Non-Academic Work</span>
+                </a>
+      <a href="#">
+                    <span>Blank</span>
+                </a>
+      
+    </nav>
+
+
+  
+
+    
+
+    
+  </header>
+
+  <div class="container">
+    <div class="bio">
+      <h2>Welcome to Annoyance Analysis!</h2>
+
+      <p>This is a series of papers written by me exploring the mathematics and physics behind every-day occurrences. It began with when my friend was making fun of me for being bad at the game 'Sudoku', and rather than just getting better, I wrote a paper on the mathematics behind solving a Sudoku game. That sparked the insperation to research into the unseen mathematics behind common games, events and phenomena.</p>
+
+      <p>Each paper is inspired by an event that piqued my intrest or annoyed me in some way. Feel free to look over the papers, or reach out via the 'contact' page if you have an idea for this series that you would like to see.</p>
+  
+  </div>
+
+ 
+
+</body>
+</html>
