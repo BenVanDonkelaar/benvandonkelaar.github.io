@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ben Van Donkelaar - Annoyance Analysis</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: Georgia, serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.075rem;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 2rem 2rem 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3.0rem;
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    nav {
+      align-self: flex-end;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 1.3rem;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+      flex: 1;
+    }
+
+    .bio {
+      margin-bottom: 3rem;
+    }
+
+    .bio h2 {
+      color: #4a90e2;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .bio p {
+      line-height: 1.75;
+      margin-bottom: 1.3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem 6rem;
+      justify-items: center;
+    }
+
+    a.card {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 500px;
+      border: 2px solid #444;
+      padding: 2rem;
+      background-color: #fff;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .description {
+      opacity: 0;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card:hover .description {
+      opacity: 1;
+    }
+    .card.placeholder {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.95rem;
+      background-color: #eee;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      nav {
+        align-self: flex-start;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        margin-left: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1>Ben Van Donkelaar</h1>
+    </div>
+    <nav>
+      <a href="/">
+        <span>Home</span>
+      </a>
+      <a href="/resume/">
+        <span>Resume & CV</span>
+      </a>
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+      <a href="/academic_work/" class="active">
+        <span>Academic Work</span>
+      </a>
+      <a href="/non_academic_work/">
+        <span>Non-Academic Work</span>
+      </a>
+      <a href="#">
+        <span>Blank</span>
+      </a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="bio">
+      <h2>Welcome to Annoyance Analysis!</h2>
+
+      <p>This is a series of papers written by me exploring the mathematics and physics behind every-day occurrences. It began with when my friend was making fun of me for being bad at the game 'Sudoku', and rather than just getting better, I wrote a paper on the mathematics behind solving a Sudoku game. That sparked the insperation to research into the unseen mathematics behind common games, events and phenomena.</p>
+
+      <p>Each paper is inspired by an event that piqued my interest or annoyed me in some way. Feel free to look over the papers, or reach out via the 'contact' page if you have an idea for this series that you would like to see.</p>
+
+      <p>DISCLAIMER: These papers are meant to offer mathematical insight in a way that is fun to consume, I attempted to write these papers in a manor that is both academic & formal, but also fun and humerous(for all my serious, formal academic papers, see 'Research Papers' and 'Essays'). I like to call this style of writing (which I have strived to perfect over the years) 'academic shenaniganery', or 'intellectual clownery'. Also in the debate for genre name are: 'graduate goofiness' and 'mathematics monkey business'. Okay you get the point, happy reading!</p>
+
+      <p>DISCLAIMER 2: For the majority of these papers, the topics of which they explore were unknown to me upon the time of writing. These papers are also meant as a learning experiance for me, so please do not expect harvard level papers, they are simply my own research pretaining to an intresting topic or question.</p>
+  
+  </div>
+
+    <div class="grid">
+      <a href="/academic_work/annoyance_analysis/Sudoku_Analysis.pdf" class="card" target="_blank">
+        <h3>The Sudoku Problem</h3>
+        <div class="description">Why solving Sudoku isn't as simple as it seems.</div>
+      </a>
+      <a href="/academic_work/annoyance-analysis/paper2.pdf" class="card">
+        <h3>Trident? Nah, Tri-ing to stay sane</h3>
+        <div class="description">Fun little game called Minecraft, need I say more?</div>
+      </a>
+      <a href="/academic_work/annoyance-analysis/paper3.pdf" class="card">
+        <h3>UP IRL??</h3>
+        <div class="description">Can wind forces, through fluid dynamics, enable flight for a human holding an umbrella?</div>
+      </a>
+      <a href="/academic_work/annoyance-analysis/paper4.pdf" class="card placeholder" aria-hidden="true">
+        <h3>The Backpack Distribution Paradox</h3>
+        <div class="description">Mathematical injustice in locker room cubby allocation.</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
